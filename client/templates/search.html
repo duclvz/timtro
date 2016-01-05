@@ -1,0 +1,83 @@
+<template name="search">
+  <div class="container z-depth-2" style="padding: 20px;">
+    <div class="input-field col s12" style="margin-top: 1rem;">
+      <select>
+        <option value="" disabled selected>Chọn loại nhà trọ</option>
+        <option value="1">Tất cả</option>
+        <option value="2">Khu nhà trọ</option>
+        <option value="3">Chung cư mini</option>
+        <option value="4">Nhà trọ độc lập</option>
+        <option value="5">Nhà riêng</option>
+        <option value="6">Ở cùng chủ</option>
+        <option value="7">Ở ghép</option>
+      </select>
+    </div>
+
+    <div class="input-field col s12">
+      <select>
+        <option value="" disabled selected>Chọn mức giá</option>
+        <option value="1">Tất cả</option>
+        <option value="2">Dưới 1 triệu</option>
+        <option value="3">1-2 triệu</option>
+        <option value="4">2-3 triệu</option>
+        <option value="5">Trên 3 triệu</option>
+      </select>
+    </div>
+
+    <div class="input-field col s12">
+      <select>
+        <option value="" disabled selected>Chọn diện tích</option>
+        <option value="1">Tất cả</option>
+        <option value="2">Dưới 10 m2</option>
+        <option value="3">10-15 m2</option>
+        <option value="4">15-20 m2</option>
+        <option value="5">20-25 m2</option>
+        <option value="6">Trên 25 m2</option>
+      </select>
+    </div>
+    <div class="row">
+      <div class="col s12 m6 l6">
+        <input type="checkbox" id="dieuhoa">
+        <label for="dieuhoa">Điều hòa</label>
+      </div>
+      <div class="col s12 m6 l6">
+        <input type="checkbox" id="nonglanh">
+        <label for="nonglanh">Nóng lạnh</label>
+      </div>
+      <div class="col s12 m6 l6">
+        <input type="checkbox" id="khepkin">
+        <label for="khepkin">Vệ sinh khép kín</label>
+      </div>
+      <div class="col s12 m6 l6">
+        <button id="loc" class="waves-effect waves-light btn-large" style="width: 100%;">Lọc</button>
+      </div>
+    </div>
+  </div>
+  <div id="ketqua" style="padding-left: 5px; padding-right: 5px;">
+    {{#each articles}}
+    <div class="responsive-card z-depth-2">
+      <div class="card">
+        <div class="valign-wrapper avatar" style="padding-left: 10px;padding-top: 10px;">
+          <i class="mdi-social-person" style="font-size: 48px;"></i>
+          <div style="padding-left: 10px;">
+            <a href="/article/{{_id}}"><span class="blue-text" style="font-size: large;font-weight: bold;">{{tieude}}</span></a>
+            <p style="margin-top: 0px;margin-bottom: 0px;"><b>{{ownername}}</b><span class="grey-text" style="font-size: smaller;padding-left: 5px;">{{convertTime time}}</span></p>
+          </div>
+        </div>
+        <div class="card-content">
+          <p><b>Địa chỉ: </b><span>{{diachi}}</span></p>
+          <p><b>Điện thoại: </b><span><a href="tel:{{dienthoai}}">{{dienthoai}}</a></span></p>
+          <p><b>Giá: </b><span>{{numberWithCommas gia}} VNĐ</span></p>
+          <p><b>Loại nhà trọ: </b><span>{{loai}}</span></p>
+          <p><b><a href="/article/{{_id}}">Xem chi tiết</a></b></p>
+        </div>
+        <div class="card-image">
+          <img src="{{urlMap lat lng}}">
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    {{#if articles.length}} {{else}}
+    <h5 class="center">Không có kết quả nào</h5> {{/if}}
+  </div>
+</template>

@@ -1,0 +1,21 @@
+<template name="tabs">
+    <div class="row">
+        <div class="col s12 navbar-fixed" style="height: 48px;">
+            <nav style="height: inherit;">
+                <ul class="tabs z-depth-2">
+                    <li class="tab col s4"><a href="#home"><i class="mdi-action-home"></i></a></li>
+                    <li class="tab col s4"><a href="#news"><i class="mdi-av-my-library-add"></i></a></li>
+                    <li class="tab col s4"><a href="#maps"><i class="mdi-maps-pin-drop"></i></a></li>
+                    <li class="tab col s4"><a href="#menu"><i class="mdi-navigation-menu"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div style="padding-top: 56px; padding-left: 5px; padding-right: 5px;">
+            <div id="home" class="col s12">{{> home}}</div>
+            <div id="news" class="col s12"></div>
+            <div id="maps" class="col s12"></div>
+            <div id="menu" class="col s12">{{> menu}}</div>
+        </div>
+    </div>
+</template>
+

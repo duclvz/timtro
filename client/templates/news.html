@@ -1,0 +1,67 @@
+<template name="news">
+    <div class="collection with-header">
+        <form>
+        <div class="input-field collection-item"> <i class="mdi-action-label prefix"></i>
+            <input id="tieude" type="text" class="validate" placeholder="Tiêu đề" style="font-size: x-large;font-weight: bold;" required>
+        </div>
+        <div class="input-field collection-item"> <i class="mdi-communication-phone prefix"></i>
+            <input id="dienthoai" type="tel" class="validate" placeholder="Điện thoại liên hệ" required>
+        </div>
+        <div class="input-field collection-item"> <i class="mdi-communication-location-on prefix"></i>
+            <input id="diachi" type="text" class="validate" placeholder="Địa chỉ" required>
+        </div>
+        <div class="input-field collection-item"> <i class="mdi-action-description prefix"></i>
+            <textarea id="mota" class="materialize-textarea" placeholder="Mô tả"></textarea>
+        </div>
+        <div name="ThongTinTongQuan">
+            <div class="collection-header"><nav class="z-depth-2"><a class="brand-logo">Thông tin tổng quan</a></nav></div>
+            <p class="collection-item black-text">Loại
+                <span class="input-field badge">
+						<select required>
+							<option value="" disabled selected>Chọn loại nhà trọ</option>
+							<option value="1">Khu nhà trọ</option>
+							<option value="2">Chung cư mini</option>
+							<option value="3">Nhà trọ độc lập</option>
+							<option value="3">Nhà riêng</option>
+							<option value="3">Ở cùng chủ</option>
+							<option value="3">Ở ghép</option>
+						</select>
+				</span>
+				</p>
+            <p class="collection-item black-text">Giá<span class="badge"><input id="gia" type="number" placeholder="Nhập giá" class="validate" required></span></p>
+        </div>
+        <div name="ThongTinChiTiet">
+            <div class="collection-header"><nav class="z-depth-2"><a class="brand-logo">Thông tin chi tiết</a></nav></div>
+            <p class="collection-item black-text">Diện tích<span class="badge"><input id="dientich" type="number" placeholder="Nhập diện tích (m2)" class="validate" required></span></p>
+            <p class="collection-item black-text">Giá điện<span class="badge"><input id="giadien" type="text" placeholder="Nhập giá điện (VNĐ/số)" class="validate" required></span></p>
+            <p class="collection-item black-text">Giá nước<span class="badge"><input id="gianuoc" type="text" placeholder="Nhập giá nước (VNĐ/m3)" class="validate" required></span></p>
+            <p class="collection-item black-text">Internet<span class="badge"><input id="internet" type="text" placeholder="Nhập giá Internet (VNĐ/tháng)" class="validate" required></span></p>
+            <p class="collection-item black-text">Điều hòa<span class="badge switch">
+    					<input type="checkbox" id="dieuhoa">
+    					<label for="dieuhoa"></label>
+    					</span> </p>
+            <p class="collection-item black-text">Nóng lạnh<span class="badge switch">
+			    		<input type="checkbox" id="nonglanh">
+			    		<label for="nonglanh"></label>
+    				</span></p>
+            <p class="collection-item black-text">Vệ sinh khép kín <span class="badge switch">			    	
+			    		<input type="checkbox" id="khepkin">
+			    		<label for="khepkin"></label>
+    				</span></p>
+        </div>
+        <div name="ViTriDiaLy">
+            <div class="collection-header"><nav class="z-depth-2"><a class="brand-logo">Vị trí bản đồ</a></nav></div>
+            <div class="collection-item map" style="height: 300px;">
+                {{> mapCanvasSelect}}
+            </div>
+        </div>
+        <div class="collection-item">
+            <button id="dangtin" class="waves-effect waves-light btn-large" style="width: 100%;" type="submit" >Đăng tin ngay</button>
+        </div>
+        </form>
+    </div>
+</template>
+
+<template name="mapCanvasSelect">
+    <div id="map-canvas" class="map-canvas" style="height: 280px;"></div>
+</template>

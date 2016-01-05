@@ -1,0 +1,247 @@
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.row .col {
+  padding-top: 0;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.row {
+  margin-bottom: auto;
+}
+
+.tabs .indicator {
+  height: 4px;
+}
+
+.input-field input[type=search] {
+  height: 56px;
+  line-height: 56px;
+}
+
+@media only screen and (min-width: 601px) {
+  .input-field input[type=search] {
+    height: 64px;
+    line-height: 64px;
+  }
+}
+
+.input-field input[type=search]:focus {
+  background-color: #0288d1;
+  color: #ffffff;
+}
+
+.card .card-title {
+  font-weight: bolder;
+}
+
+.card .card-content {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.card .card-action {
+  padding: 0px;
+}
+
+.card .card-image {
+  padding: 10px;
+}
+
+.material-icons {
+  line-height: inherit;
+  height: inherit;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+  height: inherit;
+  border-bottom: 0px;
+  box-shadow: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+.select-wrapper span.caret {
+  top: 0px;
+}
+
+.select-wrapper input.select-dropdown {
+  height: inherit;
+  line-height: inherit;
+  border-bottom: 0px;
+}
+
+.input-field {
+  margin-top: 0px;
+}
+
+.collection-header nav {
+  background-color: #019C2F;
+  height: 36px;
+  line-height: 36px;
+}
+
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]),
+input[type=text].valid,
+input[type=text]:focus.valid,
+input[type=password].valid,
+input[type=password]:focus.valid,
+input[type=email].valid,
+input[type=email]:focus.valid,
+input[type=url].valid,
+input[type=url]:focus.valid,
+input[type=time].valid,
+input[type=time]:focus.valid,
+input[type=date].valid,
+input[type=date]:focus.valid,
+input[type=datetime-local].valid,
+input[type=datetime-local]:focus.valid,
+input[type=tel].valid,
+input[type=tel]:focus.valid,
+input[type=number].valid,
+input[type=number]:focus.valid,
+input[type=search].valid,
+input[type=search]:focus.valid,
+textarea.materialize-textarea.valid,
+textarea.materialize-textarea:focus.valid {
+  border-bottom: 0px;
+  box-shadow: 0 0 0 0;
+}
+
+.collection .collection-item:last-child {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.input-field .prefix ~ textarea {
+  padding-top: 0px;
+}
+
+textarea.materialize-textarea {
+  padding: 0;
+}
+
+blockquote {
+  border-left: 5px solid #0288d1;
+}
+
+.pagination li.active {
+  background-color: #0288d1;
+}
+
+footer.page-footer {
+  background-color: #0288d1;
+}
+
+nav {
+  background-color: #0288d1;
+}
+
+.tabs .tab a {
+  color: #0288d1;
+}
+
+.side-nav .collapsible-body li.active,
+.side-nav.fixed .collapsible-body li.active {
+  background-color: #0288d1;
+}
+
+.tabs .tab a:hover {
+  color: rgba(2, 136, 209, 0.5);
+}
+
+.tabs .tab.disabled a {
+  color: rgba(2, 136, 209, 0.5);
+}
+
+.tabs .indicator {
+  background-color: rgba(2, 136, 209, 0.75);
+}
+
+.at-form {
+  margin: 20px;
+}
+
+.header {
+  border-bottom: 1px solid #e0e0e0;
+  font-size: xx-large;
+  padding-bottom: 0.6rem;
+}
+
+#at-field-username_and_email,
+#at-field-password,
+#at-field-password_again,
+#at-field-email,
+#at-field-username,
+#at-field-current_password {
+  height: 3rem;
+  border-bottom: 1px solid #9e9e9e;
+  box-shadow: none;
+  margin: 0 0 15px 0;
+}
+
+#at-field-username_and_email.valid,
+#at-field-username_and_email:focus.valid,
+#at-field-password.valid,
+#at-field-password:focus.valid,
+#at-field-password_again.valid,
+#at-field-password_again:focus.valid,
+#at-field-email.valid,
+#at-field-email:focus.valid,
+#at-field-username.valid,
+#at-field-username:focus.valid,
+#at-field-current_password.valid,
+#at-field-current_password:focus.valid {
+  border-bottom: 1px solid #4CAF50;
+  box-shadow: 0 1px 0 0 #4CAF50;
+}
+
+#at-field-username_and_email:focus:not([readonly]),
+#at-field-password:focus:not([readonly]),
+#at-field-password_again:focus:not([readonly]),
+#at-field-email:focus:not([readonly]),
+#at-field-username:focus:not([readonly]),
+#at-field-current_password:focus:not([readonly]) {
+  border-bottom: 1px solid #26a69a;
+  box-shadow: 0 1px 0 0 #26a69a
+}
+
+#mapcontent p {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+nav i,
+nav [class^="mdi-"],
+nav [class*="mdi-"],
+nav i.material-icons {
+  display: block;
+  font-size: 2rem;
+  height: inherit;
+  line-height: inherit;
+}
+
+.prefix {
+  font-size: 2rem;
+  vertical-align: middle;
+}

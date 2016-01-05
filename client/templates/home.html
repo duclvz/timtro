@@ -1,0 +1,27 @@
+<template name="home">
+  {{#each articles}}
+  <div class="responsive-card z-depth-2">
+    <div class="card">
+      <div class="valign-wrapper avatar" style="padding-left: 10px;padding-top: 10px;">
+        <i class="mdi-social-person" style="font-size: 48px;"></i>
+        <div style="padding-left: 10px;">
+          <a href="/article/{{_id}}"><span class="blue-text" style="font-size: large;font-weight: bold;">{{tieude}}</span></a>
+          <p style="margin-top: 0px;margin-bottom: 0px;"><b>{{ownername}}</b><span class="grey-text" style="font-size: smaller;padding-left: 5px;">{{convertTime time}}</span></p>
+        </div>
+      </div>
+      <div class="card-content">
+        <p><b>Địa chỉ: </b><span>{{diachi}}</span></p>
+        <p><b>Điện thoại: </b><span><a href="tel:{{dienthoai}}">{{dienthoai}}</a></span></p>
+        <p><b>Giá: </b><span>{{numberWithCommas gia}} VNĐ</span></p>
+        <p><b>Loại nhà trọ: </b><span>{{loai}}</span></p>
+        <p><b><a href="/article/{{_id}}">Xem chi tiết</a></b></p>
+      </div>
+      <div class="card-image">
+        <img src="{{urlMap lat lng}}">
+      </div>
+    </div>
+  </div>
+  {{/each}}
+  {{#if articles.length}} {{else}}
+  <h5 class="center">Không có bài đăng nào</h5> {{/if}}
+</template>

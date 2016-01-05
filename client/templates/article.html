@@ -1,0 +1,62 @@
+<template name="article">
+    {{#with article}}
+    <div class="collection with-header" id="thongtin">
+        <div class="valign-wrapper avatar collection-header" style="padding-left: 10px;padding-top: 10px;">
+            <i class="mdi-social-person" style="font-size: 48px;"></i>
+            <div style="padding-left: 10px;">
+                <span class="blue-text" style="font-size: large;font-weight: bold;">{{tieude}}</span>
+                <p style="margin-top: 0px;margin-bottom: 0px;"><b>{{ownername}}</b><span class="grey-text" style="font-size: smaller;padding-left: 5px;">{{convertTime time}}</span></p>
+            </div>
+        </div>
+        <div class="collection-item"> <i class="mdi-communication-phone prefix"></i>
+            <span><a href="tel:{{dienthoai}}">{{dienthoai}}</a></span>
+        </div>
+        <div class="collection-item"> <i class="mdi-communication-location-on prefix"></i>
+            <p class="black-text" style="display: inline;">{{diachi}}</p>
+        </div>
+        <p class="collection-item">{{mota}}</p>
+
+        <div name="ThongTinTongQuan">
+            <div class="collection-header">
+                <nav class="z-depth-2"><a class="brand-logo">Thông tin tổng quan</a></nav>
+            </div>
+            <p class="collection-item black-text">Loại<span class="badge">{{loai}}</span></p>
+            <p class="collection-item black-text">Giá<span class="badge">{{numberWithCommas gia}} VNĐ</span></p>
+        </div>
+
+        <div name="ThongTinChiTiet">
+            <div class="collection-header">
+                <nav class="z-depth-2"><a class="brand-logo">Thông tin chi tiết</a></nav>
+            </div>
+            <p class="collection-item black-text">Diện tích<span class="badge">{{dientich}} m2</span></p>
+            <p class="collection-item black-text">Giá điện<span class="badge">{{giadien}}</span></p>
+            <p class="collection-item black-text">Giá nước<span class="badge">{{gianuoc}}</span></p>
+            <p class="collection-item black-text">Internet<span class="badge">{{internet}}</span></p>
+            <p class="collection-item black-text">Điều hòa<span class="badge switch">
+    					<input type="checkbox" id="dieuhoa" disabled="disabled">
+    					<label for="dieuhoa"></label>
+    					</span> </p>
+            <p class="collection-item black-text">Nóng lạnh<span class="badge switch">
+			    		<input type="checkbox" id="nonglanh" disabled="disabled">
+			    		<label for="nonglanh"></label>
+    				</span></p>
+            <p class="collection-item black-text">Vệ sinh khép kín <span class="badge switch">			    	
+			    		<input type="checkbox" id="khepkin" disabled="disabled">
+			    		<label for="khepkin"></label>
+    				</span></p>
+        </div>
+        <div name="ViTriDiaLy">
+            <div class="collection-header">
+                <nav class="z-depth-2"><a class="brand-logo">Vị trí bản đồ</a></nav>
+            </div>
+            <div class="collection-item map" style="height: 300px;">
+                {{> mapCanvas}}
+            </div>
+        </div>
+    </div>
+    {{/with}}
+</template>
+
+<template name="mapCanvas">
+    <div id="map-canvas" class="map-canvas" style="height: 280px;"></div>
+</template>
